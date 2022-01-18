@@ -25,7 +25,7 @@ app.use(morgan("common"));
 
 app.use("/api/users", userRotuer);
 app.use("/api/auth", authRouter);
-app.use("/api/post", postRouter);
+app.use("/api/posts", postRouter);
 
 app.listen(PORT, ()=>{
     console.log("Server running")
