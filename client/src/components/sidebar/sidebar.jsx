@@ -9,7 +9,9 @@ import {
     WorkOutline,
     Event,
     School
-} from "@mui/icons-material"
+} from "@mui/icons-material";
+import {Users} from "../../dummyData"
+import CloseFriend from "../closeFriends/closeFriends";
 
 export default function Sidebar() {
     return (
@@ -56,35 +58,9 @@ export default function Sidebar() {
                 <button className="sidebarButton">Show More</button>
                 <hr className="sidebarHr" />
                 <ul className="sidebarFriendList">
-                    <li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li><li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li><li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li><li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li><li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li><li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li><li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li><li className="sidebarFriend">
-                        <img className="sidebarFriendImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                        <span className="sidebarFriendName">Mikel G</span>
-                    </li>
+                    {Users.map(u=>(
+                        <CloseFriend key={u.id} user={u} />
+                    ))}
                 </ul>
             </div>
         </div>
