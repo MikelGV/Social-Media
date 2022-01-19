@@ -1,4 +1,6 @@
 import "./rightbar.css"
+import {Users} from "../../dummyData"
+import Online from "../online/online";
 
 export default function Rightbar() {
     return (
@@ -11,48 +13,9 @@ export default function Rightbar() {
                 <img className="rightbarAd" src="/assets/ads.jpg" alt="" />
                 <h4 className="rightbarTitle">Online Friends</h4>
                 <ul className="righbarFrinedList">
-                    <li className="rightbarFriend">
-                        <div className="righbarProfileImgContainer">
-                            <img className="rightbarProfileImg" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Joe mama</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="righbarProfileImgContainer">
-                            <img className="rightbarProfileImg" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Joe mama</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="righbarProfileImgContainer">
-                            <img className="rightbarProfileImg" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Joe mama</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="righbarProfileImgContainer">
-                            <img className="rightbarProfileImg" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Joe mama</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="righbarProfileImgContainer">
-                            <img className="rightbarProfileImg" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Joe mama</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="righbarProfileImgContainer">
-                            <img className="rightbarProfileImg" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername">Joe mama</span>
-                    </li>
+                    {Users.map(u=>(
+                        <Online key={u.id} user={u}/>
+                    ))}
                 </ul>
             </div>
         </div>
