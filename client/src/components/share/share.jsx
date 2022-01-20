@@ -11,7 +11,7 @@ export default function share() {
         <div className="share">
             <div className="shareWrapper">
                 <div className="shareTop">
-                    <img className="shareProfileImage" src="/assets/person/pexels-koolshooters-7689011.jpg" alt="" />
+                    <img className="shareProfileImage" src="/assets/person/1.jpg" alt="" />
                     <input placeholder="What's in your mind Mikel?" className="shareInput" />
                 </div>
                 <hr className="shareHr" />
