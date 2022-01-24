@@ -1,8 +1,8 @@
 import "./message.css"
 
-export default function Message() {
+export default function Message({own}) {
   return (
-      <div className="message">
+      <div className={own ? "message own" : "message"}>
           <div className="messageTop">
               <img src="" className="messageImg" alt="" />
               <p className="messageText">Hello this is a message</p>
