@@ -16,7 +16,7 @@ export const Users = [
     },
     {
       id:4,
-      profilePicture: "post/1.jpg",
+      profilePicture: "person/1.jpg",
       username: "Dora Hawks",
     },
     {
@@ -55,7 +55,7 @@ export const Users = [
     {
       id: 1,
       desc: "Love For All, Hatred For None.",
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "5 mins ago",
       userId: 1,
       like: 32,
@@ -63,7 +63,7 @@ export const Users = [
     },
     {
       id: 2,
-      photo: "person/pexels-koolshooters-7689011.jpg",
+      photo: "post/1.jpg",
       date: "15 mins ago",
       userId: 2,
       like: 2,
@@ -72,7 +72,7 @@ export const Users = [
     {
       id: 3,
       desc: "Every moment is a fresh beginning.",
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "1 hour ago",
       userId: 3,
       like: 61,
@@ -80,7 +80,7 @@ export const Users = [
     },
     {
       id: 4,
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "4 hours ago",
       userId: 4,
       like: 7,
@@ -88,7 +88,7 @@ export const Users = [
     },
     {
       id: 5,
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "5 hours ago",
       userId: 5,
       like: 23,
@@ -96,7 +96,7 @@ export const Users = [
     },
     {
       id: 6,
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "1 day ago",
       userId: 6,
       like: 44,
@@ -105,7 +105,7 @@ export const Users = [
     {
       id: 7,
       desc: "Never regret anything that made you smile.",
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "2 days ago",
       userId: 7,
       like: 52,
@@ -113,7 +113,7 @@ export const Users = [
     },
     {
       id: 8,
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "3 days ago",
       userId: 8,
       like: 15,
@@ -122,7 +122,7 @@ export const Users = [
     {
       id: 9,
       desc: "Change the world by being yourself.",
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "5 days ago",
       userId: 9,
       like: 11,
@@ -130,7 +130,7 @@ export const Users = [
     },
     {
       id: 10,
-      photo: "post/shutterstock_376532611.jpg",
+      photo: "post/1.jpg",
       date: "1 week ago",
       userId: 10,
       like: 104,

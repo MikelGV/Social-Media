@@ -2,6 +2,7 @@ import Home from "./pages/home/home";
 import Login from "./pages/login/login";
 import Profile from "./pages/profile/profile";
 import Register from "./pages/register/register";
+import Messenger from "./pages/messenger/messenger";
 import {
   BrowserRouter,
   Routes,
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" element={ user ? <Navigate to="/"/> : <Login />}/>
         <Route path="/profile/:username" element={<Profile />}/>
         <Route path="/register" element={user ? <Navigate to="/"/> : <Register />}/>
+        <Route path="/messenger" element={!user ? <Navigate to="/"/> :<Messenger/>} />
       </Routes>
     </BrowserRouter>
   );
