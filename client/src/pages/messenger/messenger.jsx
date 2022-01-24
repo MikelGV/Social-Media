@@ -14,7 +14,10 @@ export default function Messenger() {
                 </div>
             </div>
             <div className="chatBox">
-                <div className="chatBoxWrapper"></div>
+                <div className="chatBoxWrapper">
+                    <div className="chatBoxTop"></div>
+                    <div className="chatBoxBottom"></div>
+                </div>
             </div>
             <div className="chatOnline">
                 <div className="chatOnlineWrapper"></div>
