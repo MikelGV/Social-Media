@@ -14,13 +14,13 @@ import axios from "axios";
 export default function Share() {
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     const {user} = useContext(AuthContext);
-    const desc = useRef()
+    const description = useRef()
     const [file, setFile] = useState(null)
     const submitHandler = async (e) => {
         e.preventDefault();
         const newPost = {
           userId: user._id,
-          desc: desc.current.value,
+          description: description.current.value,
         };
         if (file) {
           const data = new FormData();
@@ -43,7 +43,7 @@ export default function Share() {
             <div className="shareWrapper">
                 <div className="shareTop">
                     <img className="shareProfileImage" src={user.profilePicture ? PF+user.profilePicture :PF+"person/noAvatar.png"} alt="" />
-                    <input placeholder={"What's in your mind "+user.username+"?"} className="shareInput" ref={desc} />
+                    <input placeholder={"What's in your mind "+user.username+"?"} className="shareInput" ref={description} />
                 </div>
                 <hr className="shareHr" />
                 {file && (
