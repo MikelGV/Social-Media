@@ -8,6 +8,9 @@ const path = require("path")
 const userRotuer = require("./routes/user");
 const authRouter = require("./routes/auth");
 const postRouter = require("./routes/post");
+const conversationRouter = require("./routes/conversations");
+const messageRouter = require("./routes/messages");
+
 
 app = express();
 
@@ -48,6 +51,8 @@ app.post("/api/upload", upload.single("file"), (req,res) => {
 app.use("/api/users", userRotuer);
 app.use("/api/auth", authRouter);
 app.use("/api/posts", postRouter);
+app.use("/api/conversations", conversationRouter);
+app.use("/api/messages", messageRouter)
 
 app.listen(PORT, ()=>{
     console.log("Server running")
