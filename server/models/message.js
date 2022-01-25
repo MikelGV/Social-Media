@@ -8,7 +8,7 @@ const messageSchema = mongoose.Schema({
         type: String
     },
     text: {
-        String
+        type: String
     }
 }, {timestamp:true})
 
