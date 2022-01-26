@@ -28,3 +28,9 @@
     top:2px;
     right: 2px;
 }
+
+@media screen and (max-widht: 768px) {
+    .chatOnlineName {
+        display: none;
+    }
+}
