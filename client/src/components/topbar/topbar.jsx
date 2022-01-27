@@ -23,7 +23,9 @@ export default function Topbar() {
             <div className="topbarRight">
                 <div className="topbarLinks">
                     <span className="topbarLink">HomePage</span>
-                    <span className="topbarLink">Timeline</span>
+                    <Link to="/messenger" style={{textDecoration:"none"}}>
+                        <span className="topbarLink">Messenger</span>
+                    </Link>
                 </div>
                 <div className="topbarIcons">
                     <div className="topbarIconItem">
