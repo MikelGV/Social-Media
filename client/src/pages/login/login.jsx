@@ -15,6 +15,10 @@ export default function Login() {
         loginCall({email:email.current.value, password:password.current.value}, dispatch)
     }
     console.log(user)
+    const handleUserTest = (e) => {
+        e.preventDefault()
+        loginCall({email: "test2@gmail.com", password: "123456"}, dispatch)
+    }
 
     return (
         <div className="login">
@@ -32,6 +36,7 @@ export default function Login() {
                         <button className="loginButton" type="submit" disabled={isFetching}>
                             {isFetching ? (<CircularProgress color="secondary" />) : ("Log In")}
                         </button>
+                        <button onClick={handleUserTest} className="loginButton">Login as Guest</button>
                         <span className="loginForgot">Forgot Password?</span>
                         <button className="loginRegisterButton">{isFetching ? (<CircularProgress color="secondary" />) : ("Create a New Account")}</button>
                     </form>
