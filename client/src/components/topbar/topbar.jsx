@@ -7,6 +7,12 @@ import {AuthContext} from "../../context/AuthContext";
 export default function Topbar() {
     const {user} = useContext(AuthContext);
     const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+    const handleClick = (e) => {
+        e.preventDefault();
+        localStorage.removeItem('user');
+        window.location.reload();
+    }
     return(
         <div className="topbarContainer">
             <div className="topbarLeft">
@@ -22,7 +28,7 @@ export default function Topbar() {
             </div>
             <div className="topbarRight">
                 <div className="topbarLinks">
-                    <span className="topbarLink">HomePage</span>
+                    <span className="topbarLink" onClick={handleClick}>Log Out</span>
                     <Link to="/messenger" style={{textDecoration:"none"}}>
                         <span className="topbarLink">Messenger</span>
                     </Link>
