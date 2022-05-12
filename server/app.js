@@ -54,6 +54,10 @@ app.use("/api/posts", postRouter);
 app.use("/api/conversations", conversationRouter);
 app.use("/api/messages", messageRouter)
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static('client/build'));
+}
+
 app.listen(PORT, ()=>{
     console.log("Server running")
 });
