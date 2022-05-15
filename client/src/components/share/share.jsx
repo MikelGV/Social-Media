@@ -6,7 +6,7 @@ import {
     EmojiEmotions,
     Cancel
 } from "@mui/icons-material";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { useRef, useState } from "react";
 import axios from "axios";

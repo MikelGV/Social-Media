@@ -1,7 +1,7 @@
 import "./feed.css"
 import Share from "../share/share"
 import Post from "../post/post"
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import axios from "axios"
 import {AuthContext} from "../../context/AuthContext"
