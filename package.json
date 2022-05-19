@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "Social media app demo",
   "main": "index.js",
+  "engines": {
+    "node": "16.13.1",
+    "npm": "8.1.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
+    "frontend": "npm start --prefix client",
+    "backend": "cd server && npm run dev",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "server": "cd server && npm start",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix client\""
+    "start": " set NODE_ENV=production && npm run server",
+    "dev": "concurrently npm start \"npm run backend \" \"npm run frontend\""
   },
   "repository": {
     "type": "git",

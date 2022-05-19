@@ -55,12 +55,18 @@ app.use("/api/conversations", conversationRouter);
 app.use("/api/messages", messageRouter)
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.resolve(__dirname, "../client/build")));
-    app.get("*", (req,res) => {
-        res.sendFile(path.resolve(__dirname, "../client/build", "index.html"));
+    app.use(express.static(path.join(__dirname, '../client/build')))
+    app.get('*', (req, res) =>
+        res.sendFile(
+            path.resolve(__dirname, '..', 'client', 'build', 'index.html'),
+        ),
+    )
+} else {
+    app.get('/', (req, res) => {
+        res.send('Hello from app Engine!')
     })
 }
 
 app.listen(PORT, ()=>{
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Server running in ${process.env.NODE_ENV} on port ${PORT}`)
 });
