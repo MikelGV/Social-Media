@@ -11,9 +11,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "frontend": "npm start --prefix client",
     "backend": "cd server && npm run dev",
+    "socket": "cd socket && npm start",
     "server": "cd server && npm start",
     "start": " set NODE_ENV=production && npm run server",
-    "dev": "concurrently \"npm run backend \" \"npm run frontend\""
+    "dev": "concurrently \"npm run backend \" \"npm run frontend\" \"npm run socket\" "
   },
   "repository": {
     "type": "git",
